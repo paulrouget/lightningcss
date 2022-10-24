@@ -14,7 +14,7 @@
 //! module also can be used to combine a CSS file and all of its dependencies together into a single
 //! style sheet. See the individual module documentation for more details and examples.
 
-#![deny(missing_docs)]
+// #![deny(missing_docs)]
 
 pub mod bundler;
 mod compat;
@@ -31,12 +31,15 @@ mod prefixes;
 pub mod printer;
 pub mod properties;
 pub mod rules;
-mod selector;
+pub mod selector;
 pub mod stylesheet;
 pub mod targets;
 pub mod traits;
 pub mod values;
 pub mod vendor_prefix;
+
+pub use parcel_selectors;
+pub use cssparser;
 
 #[cfg(test)]
 mod tests {

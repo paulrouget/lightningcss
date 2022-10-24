@@ -287,7 +287,7 @@ fn try_parse_color_token<'i, 't>(
 }
 
 impl<'i> TokenList<'i> {
-  pub(crate) fn to_css<W>(&self, dest: &mut Printer<W>, is_custom_property: bool) -> Result<(), PrinterError>
+  pub fn to_css<W>(&self, dest: &mut Printer<W>, is_custom_property: bool) -> Result<(), PrinterError>
   where
     W: std::fmt::Write,
   {
